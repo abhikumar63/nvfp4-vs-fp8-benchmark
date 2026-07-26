@@ -1,0 +1,26 @@
+experiment:
+  name: "local_debug_run"
+  seed: 42
+  device: "cpu" # 'cpu' or 'mps' for local Mac; 'cuda' on cloud
+
+model:
+  name_or_path: "Qwen/Qwen2.5-0.5B"
+  torch_dtype: "float32" # Use FP32/FP16 locally
+
+quantization:
+  formats:
+    - "fp16" # Baseline
+    - "fp8_simulated" # Software-emulated FP8 for local dev
+
+evaluation:
+  datasets:
+    wikitext:
+      dataset_name: "Salesforce/wikitext"
+      dataset_config: "wikitext-2-raw-v1"
+      split: "test"
+      max_samples: 50 # Small subset for instant iteration
+  batch_size: 1
+
+output:
+  dir: "./outputs/test_local"
+  save_plots: false

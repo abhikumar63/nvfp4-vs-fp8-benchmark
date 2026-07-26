@@ -1,0 +1,39 @@
+{
+  "model": "Qwen/Qwen2.5-0.5B",
+  "baseline_fp16": {
+    "perplexity": 19.248859405517578,
+    "loss": 2.957451820373535
+  },
+  "quantized_formats": {
+    "fp8_simulated": {
+      "perplexity": 28.7877197265625,
+      "loss": 3.3599488735198975,
+      "layer_mse": {
+        "model.layers.0": 0.001197552657686174,
+        "model.layers.1": 0.002576567931100726,
+        "model.layers.2": 0.027958128601312637,
+        "model.layers.3": 0.05990471690893173,
+        "model.layers.4": 0.06216483563184738,
+        "model.layers.5": 0.06404241174459457,
+        "model.layers.6": 0.06506017595529556,
+        "model.layers.7": 0.06610122323036194,
+        "model.layers.8": 0.06717612594366074,
+        "model.layers.9": 0.06814953684806824,
+        "model.layers.10": 0.07007689028978348,
+        "model.layers.11": 0.07292084395885468,
+        "model.layers.12": 0.07573564350605011,
+        "model.layers.13": 0.0780414566397667,
+        "model.layers.14": 0.08155187219381332,
+        "model.layers.15": 0.08808378130197525,
+        "model.layers.16": 0.10578658431768417,
+        "model.layers.17": 0.12200683355331421,
+        "model.layers.18": 0.14267803728580475,
+        "model.layers.19": 0.1820894032716751,
+        "model.layers.20": 0.25781744718551636,
+        "model.layers.21": 0.38137978315353394,
+        "model.layers.22": 0.4946627616882324,
+        "model.layers.23": 0.7705187201499939
+      }
+    }
+  }
+}
